@@ -1,0 +1,4 @@
+{
+  "code": "export default class Hammer extends ui.HammerUI {\r\n    constructor() {\r\n        super();\r\n    }\r\n    start() {\r\n        Laya.Mouse.hide();\r\n        Laya.stage.on(Laya.Event.MOUSE_DOWN, this, this.onMouseDown);\r\n        Laya.stage.on(Laya.Event.MOUSE_MOVE, this, this.onMouseMove);\r\n        this.onMouseMove();\r\n    }\r\n    end() {\r\n        Laya.Mouse.show();\r\n        Laya.stage.off(Laya.Event.MOUSE_DOWN, this, this.onMouseDown);\r\n        Laya.stage.off(Laya.Event.MOUSE_MOVE, this, this.onMouseMove);\r\n    }\r\n    onMouseDown() {\r\n        this.hit.play(0, false);\r\n    }\r\n    onMouseMove() {\r\n        this.pos(Laya.stage.mouseX - this.width / 2, Laya.stage.mouseY - this.height / 2);\r\n    }\r\n}\r\n",
+  "references": []
+}

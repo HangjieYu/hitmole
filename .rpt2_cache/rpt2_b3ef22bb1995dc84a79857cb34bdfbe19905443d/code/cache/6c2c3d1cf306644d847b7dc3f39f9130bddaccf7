@@ -1,0 +1,4 @@
+{
+  "code": "export var ui;\r\n(function (ui) {\r\n    class GameStartUI extends Laya.View {\r\n        constructor() { super(); }\r\n        createChildren() {\r\n            super.createChildren();\r\n            this.createView(ui.GameStartUI.uiView);\r\n        }\r\n    }\r\n    GameStartUI.uiView = { \"type\": \"View\", \"props\": { \"width\": 800, \"height\": 600 }, \"compId\": 1, \"child\": [{ \"type\": \"Image\", \"props\": { \"y\": 55, \"x\": 38, \"skin\": \"ui/help.png\" }, \"compId\": 2 }, { \"type\": \"Button\", \"props\": { \"y\": 432, \"x\": 309, \"var\": \"startBtn\", \"stateNum\": 2, \"skin\": \"ui/btn_start.png\" }, \"compId\": 3 }], \"loadList\": [\"ui/help.png\", \"ui/btn_start.png\"], \"loadList3D\": [] };\r\n    ui.GameStartUI = GameStartUI;\r\n})(ui || (ui = {}));\r\n",
+  "references": []
+}

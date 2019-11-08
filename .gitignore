@@ -1,0 +1,5 @@
+.DS_Store
+.laya/chrome
+bin/js/
+bin/libs/
+release/

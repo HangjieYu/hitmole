@@ -1,0 +1,7 @@
+{
+  "code": "import GameView from \"./GameView\";\r\nimport { ui } from \"./../ui/GameOverUI\";\r\nexport default class GameOver extends ui.GameOverUI {\r\n    constructor() {\r\n        super();\r\n        this.restartBtn.on(Laya.Event.CLICK, this, this.restartGame);\r\n    }\r\n    restartGame() {\r\n        this.removeSelf();\r\n        this._gameView = new GameView();\r\n        this._gameView.gameStart();\r\n        Laya.stage.addChild(this._gameView);\r\n    }\r\n    setScoreUI(score) {\r\n        let data = {};\r\n        let temp = score;\r\n        for (let i = 9; i >= 0; i--) {\r\n            data['item' + i] = { index: Math.floor(temp % 10) };\r\n            temp = temp / 10;\r\n        }\r\n        this.scoreNums.dataSource = data;\r\n    }\r\n}\r\n",
+  "references": [
+    "D:/myLaya/HitMole-master/HitMole-master/src/script/GameView.ts",
+    "D:/myLaya/HitMole-master/HitMole-master/src/ui/GameOverUI.ts"
+  ]
+}

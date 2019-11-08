@@ -1,0 +1,6 @@
+{
+  "code": "import GameView from \"./GameView\";\r\nexport default class GameStart extends ui.GameStartUI {\r\n    constructor() {\r\n        super();\r\n        this.startBtn.on(Laya.Event.CLICK, this, this.startGame);\r\n    }\r\n    startGame() {\r\n        this.removeSelf();\r\n        if (!this._gameView) {\r\n            this._gameView = new GameView();\r\n        }\r\n        this._gameView.gameStart();\r\n        Laya.stage.addChild(this._gameView);\r\n    }\r\n}\r\n",
+  "references": [
+    "D:/myLaya/HitMole-master/HitMole-master/src/script/GameView.ts"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "code": "import GameStart from \"./script/GameStart\";\r\nclass GameMain {\r\n    constructor() {\r\n        Laya.init(800, 600);\r\n        Laya.stage.scaleMode = Laya.Stage.SCALE_NOSCALE;\r\n        Laya.stage.alignH = Laya.Stage.ALIGN_CENTER;\r\n        Laya.stage.alignV = Laya.Stage.ALIGN_MIDDLE;\r\n        Laya.stage.screenMode = Laya.Stage.SCREEN_HORIZONTAL;\r\n        Laya.stage.bgColor = '#ffcccc';\r\n        let resArray = [\r\n            {\r\n                url: 'res/atlas/ui.atlas',\r\n                type: Laya.Loader.ATLAS\r\n            },\r\n            {\r\n                url: 'ui/back.png',\r\n                type: Laya.Loader.IMAGE\r\n            },\r\n            {\r\n                url: 'ui/help.png',\r\n                type: Laya.Loader.IMAGE\r\n            }\r\n        ];\r\n        Laya.Stat.show(0, 0);\r\n        Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoaded));\r\n    }\r\n    onLoaded() {\r\n        GameMain.gameStart = new GameStart();\r\n        Laya.stage.addChild(GameMain.gameStart);\r\n    }\r\n}\r\nnew GameMain();\r\n",
+  "references": [
+    "D:/myLaya/HitMole-master/HitMole-master/src/script/GameStart.ts",
+    "D:/myLaya/HitMole-master/HitMole-master/src/script/GameView.ts",
+    "D:/myLaya/HitMole-master/HitMole-master/src/script/GameOver.ts"
+  ]
+}
